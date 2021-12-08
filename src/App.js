@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useCallback} from 'react';
 import { useStopwatch } from 'react-timer-hook';
 import { useSpeechSynthesis } from 'react-speech-kit';
 import './App.css';
@@ -11,20 +11,22 @@ export default function App() {
   ]);
 
   const { seconds, isRunning, start, reset } = useStopwatch( { autoStart:null} );
-  const { speak } = useSpeechSynthesis();
+  const { speak, speaking, supported } = useSpeechSynthesis();
+
+  const doReset = useCallback(() => reset(), []);
+  const doSpeak = useCallback((...p) => speak(...p), []);
 
   useEffect(() => {
+    
     const foundTimer = timers.find((t)=> t.time === seconds);
-    if (foundTimer) {
-
-    }
+    if (foundTimer) doSpeak({ text: foundTimer.text })
 
 
-    if (seconds > timers[timers.length - 1].time) reset();
+
+    if (seconds > timers[timers.length - 1].time) doReset();
 
 
-      console.log(foundTimer, seconds);
-  }, [seconds])
+  }, [seconds, timers, doSpeak, doReset])
 
 
 
@@ -45,6 +47,10 @@ export default function App() {
 
 
 
+
+  if (!supported) {
+    return <div>Your browser is not uspported</div>
+  }
 
   return (
     <div className="app">
@@ -81,6 +87,8 @@ export default function App() {
           Stop
           </button>
         )}
+
+        {speaking && <p>I am speaking...</p>}
       </div>
     </div>
   );
