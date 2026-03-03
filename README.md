@@ -30,3 +30,8 @@ A browser-based Tic Tac Toe game built using JavaScript.
 - Managing application state
 - Working with arrays and condition checks
 - Updating the DOM dynamically
+
+## 📸 Preview
+
+
+![Preview]<img width="1919" height="919" alt="Rock" src="https://github.com/user-attachments/assets/a93c3afc-1b9f-404a-bfcb-111e492fff69" />
