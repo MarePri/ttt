@@ -38,9 +38,6 @@ The application allows users to define custom time triggers that automatically p
 3. Run `npm start`
 4. Open `http://localhost:3000`
 
-## 🌍 Live Demo
-
-(Add GitHub Pages or deployment link here)
 
 ## 📚 What I Learned
 
