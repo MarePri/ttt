@@ -1,28 +1,32 @@
 # Tic Tac Toe (TTT)
 
-Browser verzija klasične Tic Tac Toe igre razvijena korišćenjem JavaScript-a.
+A browser-based Tic Tac Toe game built using JavaScript.
 
-## 🎮 Funkcionalnosti
+## 🎮 Features
 
-- Dva igrača
-- Detekcija pobednika
-- Reset dugme
-- Vizuelni prikaz rezultata
+- Two-player game
+- Winner detection logic
+- Reset functionality
+- Real-time board updates
 
-## 🛠 Tehnologije
+## 🛠 Technologies Used
 
 - HTML
 - CSS
 - JavaScript
 
-## ▶ Kako pokrenuti
+## ▶ How to Run
 
-1. Kloniraj repozitorijum
-2. Otvori `index.html` u browseru
+1. Clone the repository  
+2. Open `index.html` in your browser  
 
-## 📚 Naučeno
+## 🌍 Live Demo
 
-- Implementacija game logic
-- Rad sa nizovima
-- Provera pobedničkih kombinacija
-- Upravljanje stanjem aplikacije
+(Add GitHub Pages link here)
+
+## 📚 What I Learned
+
+- Implementing game logic
+- Managing application state
+- Working with arrays and condition checks
+- Updating the DOM dynamically
